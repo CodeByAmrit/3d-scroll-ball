@@ -4,6 +4,33 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  margin-right: 5px;
+  border-radius: 0px;
+  background-color: rgb(26, 4, 78);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(104, 104, 104);
+  border-radius: 10px;
+  padding-right: 5px;
+}
+
+::-webkit-scrollbar-
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(139, 139, 139);
+}
+
 body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;

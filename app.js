@@ -57,3 +57,18 @@ function render() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(images[ball.frame], 0, 0);
 }
+
+// Auto-scroll function with stopping at 70% of the page height
+function scrollToBottom() {
+  var targetScrollPos = document.body.scrollHeight * 0.7; // 70% of the page height
+  var scrollInterval = setInterval(function() {
+      if (window.scrollY < targetScrollPos) {
+          window.scrollBy(0, 10); // Scroll by 10 pixels
+      } else {
+          clearInterval(scrollInterval); // Stop scrolling
+      }
+  }, 15);
+}
+
+// Auto-scroll after page load
+window.onload = scrollToBottom;
